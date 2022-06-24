@@ -8,9 +8,10 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(upload.any());
+app.use(express.static('src/public/images'));
 
 db.hasConnection();
 
 app.use(routes);
 
-app.listen(6000, () => console.log('Servidor no ar!'));
+app.listen(3000, () => console.log('Servidor no ar!'));
