@@ -14,4 +14,5 @@ db.hasConnection();
 
 app.use(routes);
 
+const port = process.env.PORT;
 app.listen(3000, () => console.log('Servidor no ar!'));
