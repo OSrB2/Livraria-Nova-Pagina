@@ -7,7 +7,7 @@ const imagesFolder = 'images/';
 const BookController = {
   async create(req, res) {
     const file = req.files[0];
-    const uploadPath = await cloudinary.uploads(file.path, 'books');
+    const uploadPath = await cloudinary.uploads(file.path, 'livraria');
     fs.unlinkSync(file.path);
 
     const newBook = await Books.create({
